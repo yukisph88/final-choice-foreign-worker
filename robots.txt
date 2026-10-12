@@ -1,0 +1,15 @@
+# Final Choice — robots.txt
+#
+# NOTE (GitHub Pages test): search engines only read robots.txt at the ROOT
+# of a host (https://yukisph88.github.io/robots.txt), so this file is not
+# used while the site lives at /final-choice-foreign-worker/. Submit the
+# sitemap directly in Google Search Console instead.
+# It becomes active once the final domain is connected.
+#
+# TEMPORARY: when the final domain is connected, change the Sitemap line to:
+# Sitemap: https://[CANONICAL_DOMAIN]/sitemap.xml
+
+User-agent: *
+Allow: /
+
+Sitemap: https://yukisph88.github.io/final-choice-foreign-worker/sitemap.xml
