@@ -19,7 +19,7 @@
   <meta name="description" content="Looking for foreign workers in Malaysia? Final Choice assists employers with recruitment, applications, FWCMS, documentation and foreign worker processing.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://yukisph88.github.io/final-choice-foreign-worker/"><!-- TEMPORARY: replace with https://[CANONICAL_DOMAIN]/ -->
-  <meta name="theme-color" content="#0b2a4a">
+  <meta name="theme-color" content="#0a1a5c">
   <meta name="format-detection" content="telephone=no">
 
   <!-- Google Search Console verification (HTML tag method) — paste your tag here:
@@ -44,13 +44,15 @@
   <meta name="twitter:description" content="Recruitment, applications, FWCMS, documentation and foreign worker processing support for Malaysian employers.">
   <meta name="twitter:image" content="https://yukisph88.github.io/final-choice-foreign-worker/assets/images/og-image.jpg">
 
-  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
-  <!-- Optional: <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"> (180x180 PNG) -->
+  <link rel="icon" href="assets/favicon/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="assets/favicon/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="preload" as="image" href="assets/images/logo-final-choice-mark.webp" type="image/webp">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.replace('no-js','js');</script>
 
@@ -86,7 +88,6 @@
        STRUCTURED DATA (JSON-LD)
        URLs use the TEMPORARY GitHub Pages address — replace with
        https://[CANONICAL_DOMAIN]/ when the final domain is live.
-       When the real logo is added, add:  "logo": "https://.../assets/images/logo.png",
        When you have social profiles, add:  "sameAs": ["https://facebook.com/...", ...]
        ============================================================ -->
   <script type="application/ld+json">
@@ -104,6 +105,7 @@
           { "@type": "PropertyValue", "propertyID": "JTKSM Private Employment Agency Licence", "value": "JTKSM 483 (Category C)" }
         ],
         "url": "https://yukisph88.github.io/final-choice-foreign-worker/",
+        "logo": "https://yukisph88.github.io/final-choice-foreign-worker/assets/images/logo-final-choice.png",
         "image": "https://yukisph88.github.io/final-choice-foreign-worker/assets/images/og-image.jpg",
         "description": "Licensed private employment agency serving employers across Malaysia, assisting with foreign worker recruitment, applications, documentation and related employer support services.",
         "telephone": "+601118523311",
@@ -226,13 +228,14 @@
       </div>
     </div>
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Final Choice – back to top">
-        <!-- [REAL_LOGO] Replace this block with:
-             <img src="assets/images/logo.svg" alt="Agensi Pekerjaan Final Choice Sdn Bhd" width="180" height="44"> -->
-        <span class="brand-mark" aria-hidden="true">FC</span>
+      <a class="brand" href="#home" aria-label="Agensi Pekerjaan Final Choice Sdn Bhd – back to top">
+        <picture>
+          <source type="image/webp" srcset="assets/images/logo-final-choice-mark.webp">
+          <img class="brand-logo" src="assets/images/logo-final-choice-mark.png" width="320" height="196" alt="Final Choice logo">
+        </picture>
         <span class="brand-text">
-          <span class="brand-name">Final Choice</span>
-          <span class="brand-legal">Agensi Pekerjaan Final Choice Sdn Bhd</span>
+          <span class="brand-name">Agensi Pekerjaan Final Choice Sdn Bhd</span>
+          <span class="brand-legal">Foreign Worker Services &middot; Malaysia</span>
         </span>
       </a>
 
@@ -269,49 +272,61 @@
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Foreign Worker Agency &middot; Serving Employers Across Malaysia</p>
-          <h1 id="hero-title">Foreign Worker Recruitment &amp; Application Services in Malaysia</h1>
+          <p class="hero-badge"><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg> Licensed Private Employment Agency &middot; JTKSM 483 (Category C)</p>
+          <h1 id="hero-title"><span class="h1-accent">Foreign Worker</span> Recruitment &amp; Application Services in Malaysia</h1>
           <p class="hero-lead">
-            We help Malaysian employers recruit foreign workers and handle the application work &mdash; eligibility checks,
-            documents, Section 60K, FWCMS / FWe Approval and follow-up &mdash; so your HR team knows exactly what is needed at each stage.
+            Final Choice helps Malaysian employers recruit foreign workers and manage the application process &mdash;
+            eligibility and document checks, quota / application, Section 60K, FWCMS / FWe Approval and follow-up &mdash;
+            so your HR team knows exactly what is needed at each stage.
           </p>
+
+          <ul class="hero-services" aria-label="Foreign worker services">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> Recruitment</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg> Quota / Application</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg> FWCMS / FWe Approval</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg> Documentation</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> Employer Support</li>
+          </ul>
 
           <div class="hero-cta">
             <a class="btn btn-wa btn-lg js-track-whatsapp" href="https://wa.me/601118523311" data-wa="general" data-track="whatsapp_click" data-track-label="hero">
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Our Team
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire About Foreign Workers
             </a>
             <a class="btn btn-outline btn-lg" href="#contact" data-prefill-stage="Checking eligibility" data-track="cta_click" data-track-label="hero_check_requirements">
               Check Your Company Requirements
             </a>
           </div>
           <p class="cta-note">WhatsApp 011-1852 3311 opens with a ready-to-send enquiry. Prefer to call? <a class="js-track-phone" href="tel:+601138550000" data-track="phone_click" data-contact="jackie" data-track-label="hero">Jackie &mdash; 011-3855 0000</a> <span aria-hidden="true">&middot;</span> <a class="js-track-phone" href="tel:+60173211887" data-track="phone_click" data-contact="yuki" data-track-label="hero">Yuki &mdash; +6017-321 1887</a></p>
-
-          <ul class="hero-sectors" aria-label="Sectors we assist">
-            <li>Manufacturing</li><li>Services</li><li>Construction</li><li>Plantation</li><li>Agriculture</li><li>Mining &amp; Quarrying</li>
-          </ul>
         </div>
 
-        <!-- Hero panel. To use a real photo instead, replace this <div class="hero-panel"> with:
-             <figure class="hero-photo"><picture>
-               <source type="image/avif" srcset="assets/images/hero-800.avif 800w, assets/images/hero-1200.avif 1200w" sizes="(min-width:1024px) 520px, 100vw">
-               <source type="image/webp" srcset="assets/images/hero-800.webp 800w, assets/images/hero-1200.webp 1200w" sizes="(min-width:1024px) 520px, 100vw">
-               <img src="assets/images/hero-1200.jpg" width="1200" height="1000" fetchpriority="high" alt="Final Choice consultant reviewing foreign worker application documents with an employer">
-             </picture></figure> -->
-        <div class="hero-panel">
-          <div class="hp-head">
-            <p class="hp-kicker">For employers</p>
-            <p class="hp-title">What Final Choice handles with you</p>
-          </div>
-          <ol class="hp-steps">
-            <li><span class="hp-n">01</span><div><strong>Eligibility &amp; document check</strong><span>Your sector, company documents and current requirements</span></div></li>
-            <li><span class="hp-n">02</span><div><strong>Section 60K &amp; FWCMS / FWe Approval</strong><span>Preparing and submitting the employer applications</span></div></li>
-            <li><span class="hp-n">03</span><div><strong>Quota, levy &amp; immigration processing</strong><span>Next steps after approval, where applicable</span></div></li>
-            <li><span class="hp-n">04</span><div><strong>Recruitment &amp; worker arrangement</strong><span>Coordinated with your HR or operations team</span></div></li>
-          </ol>
-          <dl class="hp-foot">
-            <div><dt>Agency licence</dt><dd>JTKSM 483 (Category C)</dd></div>
-            <div><dt>Office</dt><dd>Kuala Lumpur</dd></div>
-          </dl>
+        <!-- Hero photo: licensed stock (Pexels, see README "Image credits"). To replace, export 1200x900 and
+             800x600 WebP files with the same names, or update src/srcset below. -->
+        <div class="hero-visual">
+          <figure class="hero-figure">
+            <img src="assets/images/hero-foreign-workers-1200.webp"
+                 srcset="assets/images/hero-foreign-workers-800.webp 800w, assets/images/hero-foreign-workers-1200.webp 1200w"
+                 sizes="(min-width: 1024px) 540px, 100vw" width="1200" height="900" fetchpriority="high"
+                 alt="Smiling workers in safety helmets, work uniforms and high-visibility vests at an outdoor worksite, representing foreign worker recruitment for Malaysian employers">
+          </figure>
+          <div class="hero-float hero-float-logo"><picture><source type="image/webp" srcset="assets/images/logo-final-choice.webp"><img src="assets/images/logo-final-choice.png" width="720" height="537" loading="eager" decoding="async" alt="Agensi Pekerjaan Final Choice Sdn Bhd official logo"></picture></div>
+          <a class="hero-float hero-float-wa js-track-whatsapp" href="https://wa.me/601118523311" data-wa="general" data-track="whatsapp_click" data-track-label="hero_float">
+            <span class="hfw-icon"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+            <span class="hfw-text"><small>Foreign worker enquiries</small><strong>011-1852 3311</strong></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero-sector-strip">
+          <p class="hss-label">Sectors we support</p>
+          <ul>
+            <li><a href="#sectors"><svg class="icon" aria-hidden="true"><use href="#i-factory"/></svg> Manufacturing</a></li>
+            <li><a href="#sectors"><svg class="icon" aria-hidden="true"><use href="#i-service"/></svg> Services</a></li>
+            <li><a href="#sectors"><svg class="icon" aria-hidden="true"><use href="#i-crane"/></svg> Construction</a></li>
+            <li><a href="#sectors"><svg class="icon" aria-hidden="true"><use href="#i-palm"/></svg> Plantation</a></li>
+            <li><a href="#sectors"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg> Agriculture</a></li>
+            <li><a href="#sectors"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg> Mining &amp; Quarrying</a></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -418,12 +433,11 @@
           <p>Each sector has its own requirements and supporting documents. Choose your sector to enquire directly on WhatsApp or through our enquiry form.</p>
         </div>
 
-        <!-- To add a real photo to a sector card, put this as the first child of .sector-visual:
-             <img src="assets/images/sector-manufacturing.webp" width="640" height="360" loading="lazy" alt="...">
-             The icon tile stays on top of the photo. -->
+        <!-- Sector photos: licensed stock (Pexels, see README "Image credits"), 2:1 WebP at 1280 and 640 px.
+             To replace one, export both sizes with the same file names. -->
         <div class="sectors-grid">
-          <article class="sector-card reveal" style="--tone:#1d5f86">
-            <div class="sector-visual"><svg class="sector-bg" aria-hidden="true"><use href="#i-factory"/></svg><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-factory"/></svg></span></div>
+          <article class="sector-card reveal">
+            <div class="sector-visual"><img src="assets/images/sector-manufacturing-photo-640.webp" srcset="assets/images/sector-manufacturing-photo-640.webp 640w, assets/images/sector-manufacturing-photo-1280.webp 1280w" sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw" width="1280" height="640" loading="lazy" decoding="async" alt="Factory worker in a blue uniform and hairnet operating production machinery on a clean factory floor"><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-factory"/></svg></span></div>
             <div class="sector-body">
               <h3>Manufacturing</h3>
               <p class="sector-for">Factories &amp; manufacturing companies</p>
@@ -435,8 +449,8 @@
             </div>
           </article>
 
-          <article class="sector-card reveal" style="--tone:#3b6e8f">
-            <div class="sector-visual"><svg class="sector-bg" aria-hidden="true"><use href="#i-service"/></svg><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-service"/></svg></span></div>
+          <article class="sector-card reveal">
+            <div class="sector-visual"><img src="assets/images/sector-services-photo-640.webp" srcset="assets/images/sector-services-photo-640.webp 640w, assets/images/sector-services-photo-1280.webp 1280w" sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw" width="1280" height="640" loading="lazy" decoding="async" alt="Housekeeping staff in uniform preparing a hotel room bed, representing service sector workers"><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-service"/></svg></span></div>
             <div class="sector-body">
               <h3>Services</h3>
               <p class="sector-for">Including cleaning services</p>
@@ -448,8 +462,8 @@
             </div>
           </article>
 
-          <article class="sector-card reveal" style="--tone:#8a6a2c">
-            <div class="sector-visual"><svg class="sector-bg" aria-hidden="true"><use href="#i-crane"/></svg><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-crane"/></svg></span></div>
+          <article class="sector-card reveal">
+            <div class="sector-visual"><img src="assets/images/sector-construction-photo-640.webp" srcset="assets/images/sector-construction-photo-640.webp 640w, assets/images/sector-construction-photo-1280.webp 1280w" sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw" width="1280" height="640" loading="lazy" decoding="async" alt="Construction workers in hard hats and high-visibility vests on a building site"><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-crane"/></svg></span></div>
             <div class="sector-body">
               <h3>Construction</h3>
               <p class="sector-for">Contractors &amp; construction companies</p>
@@ -461,8 +475,8 @@
             </div>
           </article>
 
-          <article class="sector-card reveal" style="--tone:#2f6b4f">
-            <div class="sector-visual"><svg class="sector-bg" aria-hidden="true"><use href="#i-palm"/></svg><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-palm"/></svg></span></div>
+          <article class="sector-card reveal">
+            <div class="sector-visual"><img src="assets/images/sector-plantation-photo-640.webp" srcset="assets/images/sector-plantation-photo-640.webp 640w, assets/images/sector-plantation-photo-1280.webp 1280w" sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw" width="1280" height="640" loading="lazy" decoding="async" alt="Plantation workers handling harvested crops in a tropical oil palm estate"><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-palm"/></svg></span></div>
             <div class="sector-body">
               <h3>Plantation</h3>
               <p class="sector-for">Estates &amp; plantation operators</p>
@@ -474,8 +488,8 @@
             </div>
           </article>
 
-          <article class="sector-card reveal" style="--tone:#4f7a3a">
-            <div class="sector-visual"><svg class="sector-bg" aria-hidden="true"><use href="#i-leaf"/></svg><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span></div>
+          <article class="sector-card reveal">
+            <div class="sector-visual"><img src="assets/images/sector-agriculture-photo-640.webp" srcset="assets/images/sector-agriculture-photo-640.webp 640w, assets/images/sector-agriculture-photo-1280.webp 1280w" sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw" width="1280" height="640" loading="lazy" decoding="async" alt="Farm worker tending young rice crops in a tropical field lined with palm trees"><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span></div>
             <div class="sector-body">
               <h3>Agriculture</h3>
               <p class="sector-for">Farms &amp; agricultural businesses</p>
@@ -487,8 +501,8 @@
             </div>
           </article>
 
-          <article class="sector-card reveal" style="--tone:#6b5a4a">
-            <div class="sector-visual"><svg class="sector-bg" aria-hidden="true"><use href="#i-mountain"/></svg><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg></span></div>
+          <article class="sector-card reveal">
+            <div class="sector-visual"><img src="assets/images/sector-mining-photo-640.webp" srcset="assets/images/sector-mining-photo-640.webp 640w, assets/images/sector-mining-photo-1280.webp 1280w" sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw" width="1280" height="640" loading="lazy" decoding="async" alt="Quarry worker operating stone-cutting machinery at an open quarry site"><span class="sector-icon"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg></span></div>
             <div class="sector-body">
               <h3>Mining &amp; Quarrying</h3>
               <p class="sector-for">Mining &amp; quarry operators</p>
@@ -525,7 +539,13 @@
           <li class="timeline-step reveal"><span class="step-num" aria-hidden="true">5</span><div class="step-body"><h3>Approval &amp; Subsequent Processing</h3><p>If approved, we coordinate next steps such as levy and immigration processing, where applicable.</p></div></li>
           <li class="timeline-step reveal"><span class="step-num" aria-hidden="true">6</span><div class="step-body"><h3>Worker Arrangement</h3><p>We coordinate recruitment and arrival-related arrangements, based on the approvals obtained.</p></div></li>
         </ol>
-        <p class="note-center reveal">Approval decisions are made by the relevant Malaysian authorities. Final Choice assists with preparation, submission and coordination.</p>
+        <div class="process-cta reveal">
+          <p>Approval decisions are made by the relevant Malaysian authorities. Final Choice assists with preparation, submission and coordination.</p>
+          <div class="btn-row">
+            <a class="btn btn-wa js-track-whatsapp" href="https://wa.me/601118523311" data-wa="general" data-track="whatsapp_click" data-track-label="process"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Start With Step 1 on WhatsApp</a>
+            <a class="btn btn-outline" href="#contact" data-prefill-stage="Checking eligibility" data-track="cta_click" data-track-label="process_check_requirements">Check Your Company Requirements</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -618,7 +638,7 @@
 
         <div class="trust-grid">
           <div class="licence-card reveal">
-            <span class="lc-icon"><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg></span>
+            <div class="lc-logo"><picture><source type="image/webp" srcset="assets/images/logo-final-choice.webp"><img src="assets/images/logo-final-choice.png" width="720" height="537" loading="lazy" decoding="async" alt="Agensi Pekerjaan Final Choice Sdn Bhd official logo"></picture></div>
             <p class="lc-kicker">Verified company information</p>
             <h3>Licensed Private Employment Agency</h3>
             <dl class="lc-list">
@@ -908,11 +928,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a class="brand brand-light" href="#home">
-          <!-- [REAL_LOGO] temporary "FC" monogram — replace with the real logo before public launch -->
-          <span class="brand-mark" aria-hidden="true">FC</span>
-          <span class="brand-text"><span class="brand-name">Final Choice</span><span class="brand-legal">Agensi Pekerjaan Final Choice Sdn Bhd</span></span>
-        </a>
+        <a class="footer-logo" href="#home" aria-label="Agensi Pekerjaan Final Choice Sdn Bhd – back to top"><picture><source type="image/webp" srcset="assets/images/logo-final-choice.webp"><img src="assets/images/logo-final-choice.png" width="720" height="537" loading="lazy" decoding="async" alt="Agensi Pekerjaan Final Choice Sdn Bhd official logo"></picture></a>
         <p>Licensed private employment agency serving employers across Malaysia, assisting with foreign worker recruitment, applications and documentation.</p>
         <p class="footer-meta">Company No. 201201028954 (1013441-H)<br>Agency Licence JTKSM 483 (Category C)</p>
         <!-- SOCIAL LINKS — uncomment and fill when available:
