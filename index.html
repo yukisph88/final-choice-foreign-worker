@@ -66,7 +66,7 @@
        ANALYTICS PLACEHOLDERS (uncomment after you have real IDs)
        The site works normally while these stay commented out.
        Click events are already pushed to window.dataLayer by script.js:
-       whatsapp_click, phone_click (contact: jackie / yuki), call_menu_open,
+       whatsapp_click, phone_click (contact: yuki),
        form_whatsapp_handoff, sector_enquiry, checklist_click, email_click.
        ============================================================
   >>> GOOGLE ANALYTICS 4 — paste your Measurement ID in BOTH places below
@@ -116,6 +116,7 @@
         "description": "Licensed private employment agency serving employers across Malaysia, assisting with foreign worker recruitment, applications, documentation and related employer support services.",
         "telephone": "+60133773333",
         "email": "apfinalchoice@gmail.com",
+        "contactPoint": { "@type": "ContactPoint", "name": "Yuki", "telephone": "+60133773333", "contactType": "customer service", "areaServed": "MY", "availableLanguage": ["English", "Malay"] },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "No. 58, Jalan Mutiara Barat 6, Taman Mutiara Barat",
@@ -255,7 +256,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a class="btn btn-wa nav-cta-mobile js-track-whatsapp" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="nav_mobile">
-          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Us
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Yuki
         </a>
         <nav class="lang-switch lang-switch-menu" aria-label="Language">
             <a href="./" lang="en" hreflang="en" class="is-active" aria-current="page">EN</a>
@@ -271,7 +272,7 @@
           <a href="ms/" lang="ms" hreflang="ms" title="Bahasa Melayu" data-track="language_switch" data-track-label="to_ms">BM</a>
         </nav>
         <a class="btn btn-wa btn-sm header-cta js-track-whatsapp" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="header">
-          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Us
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Yuki
         </a>
         <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
           <span class="sr-only">Open menu</span>
@@ -311,7 +312,7 @@
               Check Your Company Requirements
             </a>
           </div>
-          <p class="cta-note">WhatsApp 013-377 3333 opens with a ready-to-send enquiry. Prefer to call? <a class="js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="hero">Yuki &mdash; 013-377 3333</a> <span aria-hidden="true">&middot;</span> <a class="js-track-phone" href="tel:+601138550000" data-track="phone_click" data-contact="jackie" data-track-label="hero">Jackie &mdash; 011-3855 0000</a></p>
+          <p class="cta-note">WhatsApp 013-377 3333 opens with a ready-to-send enquiry. Prefer to call? <a class="js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="hero">Yuki &mdash; 013-377 3333</a></p>
         </div>
 
         <!-- Hero photo: licensed stock (Pexels, see README "Image credits"). To replace, export 1200x900 and
@@ -609,7 +610,7 @@
           <p>We explain the expected steps for your case and keep you updated &mdash; but we do not promise fixed approval dates.</p>
           <div class="btn-row">
             <a class="btn btn-wa js-track-whatsapp" href="https://wa.me/60133773333" data-wa="team" data-track="whatsapp_click" data-track-label="timeline"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Speak With Our Team</a>
-            <a class="btn btn-outline" href="#call-options" data-call-menu data-track="call_menu_open" data-track-label="timeline"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call Us</a>
+            <a class="btn btn-outline" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="timeline"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call Yuki</a>
           </div>
         </div>
         <div class="factor-card reveal">
@@ -657,9 +658,8 @@
               56000 Kuala Lumpur, Malaysia
             </address>
             <ul class="office-list">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><a class="js-track-whatsapp" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="about">WhatsApp 013-377 3333</a></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a class="js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="about">Yuki &mdash; 013-377 3333</a></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a class="js-track-phone" href="tel:+601138550000" data-track="phone_click" data-contact="jackie" data-track-label="about">Jackie &mdash; 011-3855 0000</a></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><a class="js-track-whatsapp" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="about">WhatsApp Yuki &mdash; 013-377 3333</a></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a class="js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="about">Call Yuki &mdash; 013-377 3333</a></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:apfinalchoice@gmail.com" data-track="email_click" data-track-label="about">apfinalchoice@gmail.com</a></li>
               <li class="hours-item"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Mon&ndash;Fri: 9:00&nbsp;AM&ndash;6:00&nbsp;PM<br>Sat: 9:00&nbsp;AM&ndash;1:00&nbsp;PM</span></li>
             </ul>
@@ -751,17 +751,16 @@
           <p>Tell us about your company and the foreign workers you need. Our team will get back to you to discuss the requirements that may apply.</p>
 
           <div class="contact-wa-card">
-            <span class="cl">WhatsApp Enquiries</span>
+            <span class="cl">WhatsApp Yuki</span>
             <a class="contact-wa-number js-track-whatsapp" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="contact_number">013-377 3333</a>
             <a class="btn btn-wa btn-block js-track-whatsapp" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="contact_button">
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Our Team
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Yuki
             </a>
           </div>
 
           <ul class="contact-list">
-            <li id="call-options"><span class="ci"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><span class="cl">Call Us</span>
-              <a class="js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="contact_section">Yuki &mdash; 013-377 3333</a><br>
-              <a class="js-track-phone" href="tel:+601138550000" data-track="phone_click" data-contact="jackie" data-track-label="contact_section">Jackie &mdash; 011-3855 0000</a></div></li>
+            <li id="call-options"><span class="ci"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><span class="cl">Call Yuki</span>
+              <a class="js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="contact_section">Yuki &mdash; 013-377 3333</a></div></li>
             <li><span class="ci"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><div><span class="cl">Email</span><a href="mailto:apfinalchoice@gmail.com" data-track="email_click" data-track-label="contact_section">apfinalchoice@gmail.com</a></div></li>
             <li><span class="ci"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><div><span class="cl">Office</span><span>No. 58, Jalan Mutiara Barat 6, Taman Mutiara Barat, 56000 Kuala Lumpur, Malaysia</span>
               <a class="btn btn-outline btn-sm contact-directions" href="https://www.google.com/maps/search/?api=1&amp;query=No.+58+Jalan+Mutiara+Barat+6+Taman+Mutiara+Barat+56000+Kuala+Lumpur" target="_blank" rel="noopener" data-track="maps_click" data-track-label="contact_section"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Get Directions</a></div></li>
@@ -902,7 +901,7 @@
         <div class="final-actions">
           <a class="btn btn-wa btn-lg btn-block js-track-whatsapp" href="https://wa.me/60133773333" data-wa="final" data-track="whatsapp_click" data-track-label="final_cta"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp Final Choice</a>
           <a class="btn btn-light btn-lg btn-block" href="#contact" data-track="cta_click" data-track-label="final_submit_enquiry"><svg class="icon" aria-hidden="true"><use href="#i-form"/></svg> Submit Enquiry</a>
-          <a class="btn btn-ghost-light btn-lg btn-block" href="#call-options" data-call-menu data-track="call_menu_open" data-track-label="final_cta"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call Us</a>
+          <a class="btn btn-ghost-light btn-lg btn-block" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="final_cta"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call Yuki</a>
         </div>
       </div>
     </section>
@@ -953,9 +952,8 @@
         <h2 class="footer-title">Contact</h2>
         <ul class="footer-contact">
           <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>No. 58, Jalan Mutiara Barat 6, Taman Mutiara Barat, 56000 Kuala Lumpur, Malaysia</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><a class="js-track-whatsapp" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="footer">WhatsApp 013-377 3333</a></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a class="js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="footer">Yuki &mdash; 013-377 3333</a></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a class="js-track-phone" href="tel:+601138550000" data-track="phone_click" data-contact="jackie" data-track-label="footer">Jackie &mdash; 011-3855 0000</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><a class="js-track-whatsapp" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="footer">WhatsApp Yuki &mdash; 013-377 3333</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a class="js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="footer">Call Yuki &mdash; 013-377 3333</a></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:apfinalchoice@gmail.com" data-track="email_click" data-track-label="footer">apfinalchoice@gmail.com</a></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Mon&ndash;Fri: 9:00&nbsp;AM&ndash;6:00&nbsp;PM<br>Sat: 9:00&nbsp;AM&ndash;1:00&nbsp;PM</span></li>
         </ul>
@@ -977,18 +975,9 @@
   <!-- Sticky mobile contact bar -->
   <nav class="mobile-bar" aria-label="Quick contact">
     <a class="js-track-whatsapp mb-wa" href="https://wa.me/60133773333" data-wa="general" data-track="whatsapp_click" data-track-label="mobile_bar"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>WhatsApp</span></a>
-    <a href="#call-options" data-call-menu data-track="call_menu_open" data-track-label="mobile_bar"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>Call</span></a>
+    <a href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="mobile_bar"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>Call</span></a>
     <a href="#contact" data-track="cta_click" data-track-label="mobile_bar_enquire"><svg class="icon" aria-hidden="true"><use href="#i-form"/></svg><span>Enquire</span></a>
   </nav>
-
-  <!-- Call menu (opened by every "Call" / "Call Us" button; falls back to #call-options without JS) -->
-  <dialog class="call-menu" id="call-menu" aria-labelledby="call-menu-title">
-    <p class="call-menu-title" id="call-menu-title">Call Final Choice</p>
-    <a class="btn btn-primary btn-block js-track-phone" href="tel:+60133773333" data-track="phone_click" data-contact="yuki" data-track-label="call_menu"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call Yuki &mdash; 013-377 3333</a>
-    <a class="btn btn-primary btn-block js-track-phone" href="tel:+601138550000" data-track="phone_click" data-contact="jackie" data-track-label="call_menu"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call Jackie &mdash; 011-3855 0000</a>
-    <p class="call-menu-hours">Mon&ndash;Fri: 9:00&nbsp;AM&ndash;6:00&nbsp;PM<br>Sat: 9:00&nbsp;AM&ndash;1:00&nbsp;PM</p>
-    <button class="btn btn-outline btn-block" type="button" data-close-call-menu>Cancel</button>
-  </dialog>
 
   <script src="script.js" defer></script>
 </body>

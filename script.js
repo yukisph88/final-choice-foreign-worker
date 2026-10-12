@@ -102,8 +102,8 @@
   /* ---------------- Analytics helper ----------------
      Pushes to dataLayer (GTM/GA4) and calls gtag / fbq only if installed,
      so nothing breaks while Google Analytics is not configured.
-     Events: whatsapp_click, phone_click (contact: jackie | yuki),
-     call_menu_open, form_whatsapp_handoff, sector_enquiry, checklist_click,
+     Events: whatsapp_click, phone_click (contact: yuki),
+     form_whatsapp_handoff, sector_enquiry, checklist_click,
      email_click, maps_click, cta_click, language_switch. Every event also
      carries page_language: en | ms. */
   window.dataLayer = window.dataLayer || [];
@@ -143,24 +143,6 @@
     a.rel = 'noopener';
   });
 
-  /* ---------------- Call menu (Yuki / Jackie) ----------------
-     Every [data-call-menu] button opens the dialog. Without JS (or without
-     <dialog> support) the link simply jumps to #call-options. */
-  var callMenu = doc.getElementById('call-menu');
-  if (callMenu && typeof callMenu.showModal === 'function') {
-    doc.querySelectorAll('[data-call-menu]').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        callMenu.showModal();
-      });
-    });
-    callMenu.addEventListener('click', function (e) {
-      // Close on backdrop click, Cancel, or after choosing a number
-      if (e.target === callMenu || e.target.closest('[data-close-call-menu]') || e.target.closest('a[href^="tel:"]')) {
-        callMenu.close();
-      }
-    });
-  }
 
   /* ---------------- Sticky header shadow + floating WhatsApp ---------------- */
   var header = doc.querySelector('.site-header');
