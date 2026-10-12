@@ -1,12 +1,14 @@
 /* ==========================================================================
    Final Choice — landing page script (vanilla JS, no dependencies)
+   Shared by the English page (index.html) and the Malay page (ms/index.html).
+   The language is taken from <html lang="..."> ("ms…" = Bahasa Melayu).
    ========================================================================== */
 (function () {
   'use strict';
 
   /* ------------------------------------------------------------------
      CONFIG — edit these values only
-     whatsappNumber: main foreign worker enquiry line (011-1852 3311),
+     whatsappNumber: main foreign worker enquiry line (Yuki, 013-377 3333),
                      international format, digits only, no "+" or spaces.
      formEndpoint:   leave '' — the enquiry form then prepares the message in
                      WhatsApp and the visitor presses Send themselves. Nothing
@@ -16,37 +18,97 @@
                      message is then shown only if that service confirms receipt.
      ------------------------------------------------------------------ */
   var CONFIG = {
-    whatsappNumber: '601118523311',
+    whatsappNumber: '60133773333',
     formEndpoint: ''
   };
 
-  /* Prefilled WhatsApp messages, keyed by data-wa="..." in index.html */
-  var WA_MESSAGES = {
-    general: 'Hi Final Choice, I would like to enquire about foreign worker recruitment/application services.',
-    question: 'Hi Final Choice, I have some questions about the foreign worker application process for my company.',
-    checklist: 'Hi Final Choice, I would like to request the foreign worker application document checklist.',
-    team: 'Hi Final Choice, I would like to speak with your team about the foreign worker application process and timeline.',
-    final: 'Hi Final Choice, I need foreign workers for my business.\nSector:\nBusiness activity:\nJob position:\nNumber of workers:\nCompany location:',
-    bm: 'Hi Final Choice, saya ingin bertanya tentang permohonan pekerja asing untuk syarikat saya.',
-    manufacturing: 'Hi Final Choice, I would like to enquire about foreign workers for the manufacturing sector.',
-    services: 'Hi Final Choice, I would like to enquire about foreign workers for the services sector.',
-    construction: 'Hi Final Choice, I would like to enquire about foreign workers for the construction sector.',
-    plantation: 'Hi Final Choice, I would like to enquire about foreign workers for the plantation sector.',
-    agriculture: 'Hi Final Choice, I would like to enquire about foreign workers for the agriculture sector.',
-    mining: 'Hi Final Choice, I would like to enquire about foreign workers for the mining & quarrying sector.'
+  /* ------------------------------------------------------------------
+     TEXT — one block per language. WhatsApp messages are keyed by the
+     data-wa="..." attribute in the HTML.
+     ------------------------------------------------------------------ */
+  var TEXT = {
+    en: {
+      wa: {
+        general: 'Hi Final Choice, I would like to enquire about foreign worker services.',
+        question: 'Hi Final Choice, I have some questions about the foreign worker application process for my company.',
+        checklist: 'Hi Final Choice, I would like to request the foreign worker application document checklist.',
+        team: 'Hi Final Choice, I would like to speak with your team about the foreign worker application process and timeline.',
+        final: 'Hi Final Choice, I need foreign workers for my business.\nSector:\nBusiness activity:\nJob position:\nNumber of workers:\nCompany location:',
+        manufacturing: 'Hi Final Choice, I would like to enquire about foreign workers for the manufacturing sector.',
+        services: 'Hi Final Choice, I would like to enquire about foreign workers for the services sector.',
+        construction: 'Hi Final Choice, I would like to enquire about foreign workers for the construction sector.',
+        plantation: 'Hi Final Choice, I would like to enquire about foreign workers for the plantation sector.',
+        agriculture: 'Hi Final Choice, I would like to enquire about foreign workers for the agriculture sector.'
+      },
+      form: {
+        intro: 'Hi Final Choice, I would like to enquire about foreign worker services.',
+        name: 'Name', company: 'Company', mobile: 'Mobile', email: 'Email', location: 'Company Location',
+        sector: 'Sector', workers: 'Workers Required', position: 'Job Position', stage: 'Current Stage', message: 'Message'
+      },
+      err: {
+        name: 'Please enter your full name.',
+        company: 'Please enter your company name.',
+        phoneEmpty: 'Please enter your mobile / WhatsApp number.',
+        phone: 'Please enter a valid Malaysian mobile number, e.g. 012-345 6789.',
+        email: 'Please enter a valid email address.',
+        location: 'Please enter your company location.',
+        sector: 'Please select your business sector.',
+        workers: 'Please enter a whole number of workers.'
+      },
+      sending: 'Sending…',
+      sendFailed: 'Sorry, your enquiry could not be sent. Please try again or contact us on WhatsApp.',
+      menuOpen: 'Open menu',
+      menuClose: 'Close menu'
+    },
+    ms: {
+      wa: {
+        general: 'Hi Final Choice, saya ingin bertanya mengenai perkhidmatan pekerja asing.',
+        question: 'Hi Final Choice, saya ada beberapa soalan mengenai proses permohonan pekerja asing untuk syarikat saya.',
+        checklist: 'Hi Final Choice, saya ingin mendapatkan senarai semak dokumen untuk permohonan pekerja asing.',
+        team: 'Hi Final Choice, saya ingin berbincang dengan pasukan anda mengenai proses dan tempoh permohonan pekerja asing.',
+        final: 'Hi Final Choice, saya memerlukan pekerja asing untuk perniagaan saya.\nSektor:\nAktiviti perniagaan:\nJawatan:\nBilangan pekerja:\nLokasi syarikat:',
+        manufacturing: 'Hi Final Choice, saya ingin bertanya mengenai pekerja asing untuk sektor pembuatan.',
+        services: 'Hi Final Choice, saya ingin bertanya mengenai pekerja asing untuk sektor perkhidmatan.',
+        construction: 'Hi Final Choice, saya ingin bertanya mengenai pekerja asing untuk sektor pembinaan.',
+        plantation: 'Hi Final Choice, saya ingin bertanya mengenai pekerja asing untuk sektor perladangan.',
+        agriculture: 'Hi Final Choice, saya ingin bertanya mengenai pekerja asing untuk sektor pertanian.'
+      },
+      form: {
+        intro: 'Hi Final Choice, saya ingin bertanya mengenai perkhidmatan pekerja asing.',
+        name: 'Nama', company: 'Syarikat', mobile: 'Telefon', email: 'E-mel', location: 'Lokasi Syarikat',
+        sector: 'Sektor', workers: 'Bilangan Pekerja', position: 'Jawatan', stage: 'Peringkat Semasa', message: 'Mesej'
+      },
+      err: {
+        name: 'Sila masukkan nama penuh anda.',
+        company: 'Sila masukkan nama syarikat anda.',
+        phoneEmpty: 'Sila masukkan nombor telefon / WhatsApp anda.',
+        phone: 'Sila masukkan nombor telefon bimbit Malaysia yang sah, cth. 012-345 6789.',
+        email: 'Sila masukkan alamat e-mel yang sah.',
+        location: 'Sila masukkan lokasi syarikat anda.',
+        sector: 'Sila pilih sektor perniagaan anda.',
+        workers: 'Sila masukkan bilangan pekerja dalam nombor bulat.'
+      },
+      sending: 'Menghantar…',
+      sendFailed: 'Maaf, pertanyaan anda tidak dapat dihantar. Sila cuba lagi atau hubungi kami melalui WhatsApp.',
+      menuOpen: 'Buka menu',
+      menuClose: 'Tutup menu'
+    }
   };
 
   var doc = document;
+  var LANG = /^ms/i.test(doc.documentElement.lang) ? 'ms' : 'en';
+  var T = TEXT[LANG];
 
   /* ---------------- Analytics helper ----------------
      Pushes to dataLayer (GTM/GA4) and calls gtag / fbq only if installed,
      so nothing breaks while Google Analytics is not configured.
      Events: whatsapp_click, phone_click (contact: jackie | yuki),
      call_menu_open, form_whatsapp_handoff, sector_enquiry, checklist_click,
-     email_click, maps_click, cta_click. */
+     email_click, maps_click, cta_click, language_switch. Every event also
+     carries page_language: en | ms. */
   window.dataLayer = window.dataLayer || [];
   function track(eventName, params) {
-    params = params || {};
+    params = Object.assign({ page_language: LANG }, params || {});
     try {
       window.dataLayer.push(Object.assign({ event: eventName }, params));
       if (typeof window.gtag === 'function') window.gtag('event', eventName, params);
@@ -76,12 +138,12 @@
   }
 
   doc.querySelectorAll('[data-wa]').forEach(function (a) {
-    a.href = waUrl(WA_MESSAGES[a.getAttribute('data-wa')] || WA_MESSAGES.general);
+    a.href = waUrl(T.wa[a.getAttribute('data-wa')] || T.wa.general);
     a.target = '_blank';
     a.rel = 'noopener';
   });
 
-  /* ---------------- Call menu (Jackie / Yuki) ----------------
+  /* ---------------- Call menu (Yuki / Jackie) ----------------
      Every [data-call-menu] button opens the dialog. Without JS (or without
      <dialog> support) the link simply jumps to #call-options. */
   var callMenu = doc.getElementById('call-menu');
@@ -125,7 +187,7 @@
 
   function setNav(open) {
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.querySelector('.sr-only').textContent = open ? 'Close menu' : 'Open menu';
+    toggle.querySelector('.sr-only').textContent = open ? T.menuClose : T.menuOpen;
     nav.classList.toggle('is-open', open);
   }
   toggle.addEventListener('click', function () {
@@ -167,7 +229,9 @@
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  /* ---------------- Form prefill from CTAs ---------------- */
+  /* ---------------- Form prefill from CTAs ----------------
+     data-prefill-sector / data-prefill-stage must match an <option> text
+     on the same page (English text on index.html, Malay text on ms/). */
   var form = doc.getElementById('enquiry-form');
   var sectorSelect = doc.getElementById('f-sector');
   var stageSelect = doc.getElementById('f-stage');
@@ -202,23 +266,23 @@
   /* ---------------- Form validation ---------------- */
 
   var RULES = {
-    'f-name': function (v) { return v.length >= 2 ? '' : 'Please enter your full name.'; },
-    'f-company': function (v) { return v.length >= 2 ? '' : 'Please enter your company name.'; },
+    'f-name': function (v) { return v.length >= 2 ? '' : T.err.name; },
+    'f-company': function (v) { return v.length >= 2 ? '' : T.err.company; },
     'f-phone': function (v) {
-      if (!v) return 'Please enter your mobile / WhatsApp number.';
+      if (!v) return T.err.phoneEmpty;
       var digits = v.replace(/[\s\-()]/g, '');
       // Malaysian mobile: 01X-XXXXXXX(X), optionally with 6 / +6 prefix
-      return /^(\+?6)?01\d{8,9}$/.test(digits) ? '' : 'Please enter a valid Malaysian mobile number, e.g. 012-345 6789.';
+      return /^(\+?6)?01\d{8,9}$/.test(digits) ? '' : T.err.phone;
     },
     'f-email': function (v) {
-      return !v || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? '' : 'Please enter a valid email address.';
+      return !v || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? '' : T.err.email;
     },
-    'f-location': function (v) { return v.length >= 2 ? '' : 'Please enter your company location.'; },
-    'f-sector': function (v) { return v ? '' : 'Please select your business sector.'; },
+    'f-location': function (v) { return v.length >= 2 ? '' : T.err.location; },
+    'f-sector': function (v) { return v ? '' : T.err.sector; },
     'f-workers': function (v) {
       if (!v) return '';
       var n = Number(v);
-      return Number.isInteger(n) && n >= 1 && n <= 10000 ? '' : 'Please enter a whole number of workers.';
+      return Number.isInteger(n) && n >= 1 && n <= 10000 ? '' : T.err.workers;
     }
   };
 
@@ -272,41 +336,43 @@
     if (!online) { handOffToWhatsApp(data); return; }
 
     data.page = location.href;
+    data.page_language = LANG;
     data.submitted_at = new Date().toISOString();
     var label = submitBtn.querySelector('.btn-label');
     submitBtn.setAttribute('aria-busy', 'true');
-    label.textContent = 'Sending…';
+    label.textContent = T.sending;
 
     send(data).then(function () {
       track('form_submit', { sector: data.sector, application_stage: data.application_stage || '' });
       showSuccess();
     }).catch(function () {
-      statusEl.textContent = 'Sorry, your enquiry could not be sent. Please try again or contact us on WhatsApp.';
+      statusEl.textContent = T.sendFailed;
     }).then(function () {
       submitBtn.removeAttribute('aria-busy');
       label.textContent = submitBtn.getAttribute('data-label-online');
     });
   });
 
-  /* No backend: build a WhatsApp message from the form and open
-     wa.me/<number>?text=<encodeURIComponent(message)>. The form is NOT
-     cleared and NO "received" message is shown — the visitor reviews the
-     message and presses Send in WhatsApp themselves. Optional fields that
-     were left empty are omitted. */
+  /* No backend: build a WhatsApp message from the form (in the page's
+     language) and open wa.me/<number>?text=<encodeURIComponent(message)>.
+     The form is NOT cleared and NO "received" message is shown — the visitor
+     reviews the message and presses Send in WhatsApp themselves. Optional
+     fields that were left empty are omitted. */
   function handOffToWhatsApp(d) {
+    var L = T.form;
     var lines = [
-      'Hi Final Choice, I would like to enquire about foreign worker services.',
+      L.intro,
       '',
-      'Name: ' + d.full_name,
-      'Company: ' + d.company_name,
-      'Mobile: ' + d.mobile,
-      d.email ? 'Email: ' + d.email : null,
-      'Company Location: ' + d.company_location,
-      'Sector: ' + d.sector,
-      d.workers_required ? 'Workers Required: ' + d.workers_required : null,
-      d.job_position ? 'Job Position: ' + d.job_position : null,
-      d.application_stage ? 'Current Stage: ' + d.application_stage : null,
-      d.message ? 'Message: ' + d.message : null
+      L.name + ': ' + d.full_name,
+      L.company + ': ' + d.company_name,
+      L.mobile + ': ' + d.mobile,
+      d.email ? L.email + ': ' + d.email : null,
+      L.location + ': ' + d.company_location,
+      L.sector + ': ' + d.sector,
+      d.workers_required ? L.workers + ': ' + d.workers_required : null,
+      d.job_position ? L.position + ': ' + d.job_position : null,
+      d.application_stage ? L.stage + ': ' + d.application_stage : null,
+      d.message ? L.message + ': ' + d.message : null
     ].filter(function (l) { return l !== null; });
     var url = waUrl(lines.join('\n'));
     handoffLink.href = url;

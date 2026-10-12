@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- TEMPORARY (GitHub Pages test URL).
-       When the final domain is connected, change the <loc> below to:
-       https://[CANONICAL_DOMAIN]/
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- TEMPORARY (GitHub Pages test URLs).
+       When the final domain is connected, replace
+       https://yukisph88.github.io/final-choice-foreign-worker/  with  https://[CANONICAL_DOMAIN]/
+       in every <loc> and href below.
        The privacy page is not listed because it is a draft (noindex). -->
+
+  <!-- English -->
   <url>
     <loc>https://yukisph88.github.io/final-choice-foreign-worker/</loc>
     <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yukisph88.github.io/final-choice-foreign-worker/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yukisph88.github.io/final-choice-foreign-worker/ms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yukisph88.github.io/final-choice-foreign-worker/"/>
   </url>
-  <!-- Add future pages here, e.g.
-  <url><loc>https://[CANONICAL_DOMAIN]/fwcms-application/</loc></url>
-  <url><loc>https://[CANONICAL_DOMAIN]/section-60k-foreign-worker/</loc></url>
-  -->
+
+  <!-- Bahasa Melayu -->
+  <url>
+    <loc>https://yukisph88.github.io/final-choice-foreign-worker/ms/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yukisph88.github.io/final-choice-foreign-worker/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yukisph88.github.io/final-choice-foreign-worker/ms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yukisph88.github.io/final-choice-foreign-worker/"/>
+  </url>
 </urlset>
